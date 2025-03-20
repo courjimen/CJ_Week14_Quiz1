@@ -45,7 +45,11 @@ mv client/server .
 ```bash
 echo "node_modules" >> .gitignore
 ```
+- Then to remove them since they were previously committed I used the following command:
 
+```bash
+git rm -r --cached node_modules
+```
 4. Correct the server file’s directory by moving it to the appropriate directory
 - This was corrected when I moved the server folder out of the client folder.
 
