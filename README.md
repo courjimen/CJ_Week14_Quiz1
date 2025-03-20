@@ -10,17 +10,29 @@ npm i -y
 npm audit fix --force
 ```
 
-- I ran both the client and server with this command to view your webpage:
+- I ran both the client and server by opening two terminals and running the following in my server folder:
 ```bash
+cd server/
 npm start
 ```
 
-- Errors found was that the name of the item and the numerical prices were not displaying. I only saw "Price: "
+- Then I opened my client folder and ran:
+
+```bash
+cd client/
+npm start
+```
+
+Errors found was that the name of the item and the numerical prices were not displaying and there were an extra set of node_modules/package.json(lock) files in the root directory. 
+
+I only saw "Price: " displaying at first when I pulled up the webpage and 
 - I found within the app.js file the renderItems function was returning "items.name" and "items.price"
 - Then corrected the syntax to "item.name" and "item.price"
 - The correct webpage should display the following data below:
 
 ![](client/images/quiz.png)
+
+I deleted the extra node_modules and package.json folders from root directory 
 
 2. Correct the file architecture using command line
 - I moved your server file folder to the same root level as client (outside of client) using the commands below:
